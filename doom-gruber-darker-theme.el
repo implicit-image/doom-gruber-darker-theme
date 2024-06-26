@@ -142,9 +142,9 @@ determine the exact padding."
    (font-lock-number-face :foreground base6 :weight 'extra-light)
 
   ;;;; line numbers
-   (line-number-current-line :foreground yellow :bold bold))
+   (line-number-current-line :foreground yellow :bold bold :inherit 'hl-line)
   ;; --- variables --------------------------
   ;; ()
-  )
+  ))
 
 ;;; doom-gruber-darker-theme.el ends here
