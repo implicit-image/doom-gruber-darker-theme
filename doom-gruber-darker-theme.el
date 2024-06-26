@@ -64,7 +64,7 @@ determine the exact padding."
    (base3      '("#292b2b" "#292929" "brightblack"))
    (base4      '("#3f4040" "#3f3f3f" "brightblack"))
    (base5      '("#5c5e5e" "#525252" "brightblack"))
-   (base6      '("#757878" "#6b6b6b" "brightblack"))
+   (base6      '("#95a99f" "#6b6b6b" "brightblack"))
    (base7      '("#969896" "#979797" "brightblack"))
    (base8      '("#ffffff" "#ffffff" "white"      ))
    (fg         '("#f5f5f5"))
@@ -75,32 +75,32 @@ determine the exact padding."
    (yellow     '("#ffdd33" "#ffdd33" "yellow"))
    (green      '("#73c936" "#73c936" "green"))
    (blue       '("#81a2be" "#88aabb" "brightblue"))
-   (dark-blue  '("#41728e" "#41728e" "blue"))
+   (dark-blue  '("#303540" "#41728e" "blue"))
    (teal       '("#81a2be")) ; FIXME replace with real teal
    (magenta    '("#96a6c8" "#c9b4cf" "magenta"))
-   (violet     '("#9e95c7" "#b294bb" "brightmagenta"))
-   (cyan       '("#8abeb7" "#8abeb7" "cyan"))
+   (violet     '("#95a8af" "#b294bb" "brightmagenta"))
+   (cyan       '("#565f73" "#8abeb7" "cyan"))
    (dark-cyan  (doom-darken cyan 0.4))
 
    ;; face categories
-   (highlight      base5)
+   (highlight      base7)
    (vertical-bar   base0)
    (selection      `(,(car (doom-lighten bg 0.1)) ,@(cdr base4)))
    (builtin        yellow)
    (comments       grey)
    (doc-comments   (doom-lighten grey 0.14))
-   (constants      magenta)
-   (functions      blue)
+   (constants      base6)
+   (functions      magenta)
    (keywords       yellow)
-   (methods        violet)
-   (operators      fg)
-   (type           yellow)
+   (methods        base7)
+   (operators      yellow)
+   (type           base6)
    (strings        green)
    (variables      fg)
-   (numbers        grey)
+   (numbers        base6)
    (region         selection)
    (error          red)
-   (warning        yellow)
+   (warning        orange)
    (success        green)
    (vc-modified    fg-alt)
    (vc-added       green)
@@ -118,8 +118,7 @@ determine the exact padding."
         4))))
 
   ;; --- faces ------------------------------
-  (((line-number &override) :foreground base4)
-   ((line-number-current-line &override) :foreground blue :bold bold)
+  (
    (mode-line
     :background modeline-bg :foreground modeline-fg
     :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg)))
@@ -128,17 +127,22 @@ determine the exact padding."
     :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-alt)))
 
    ;;;; rainbow-delimiters
-   (rainbow-delimiters-depth-1-face :foreground violet)
-   (rainbow-delimiters-depth-2-face :foreground blue)
-   (rainbow-delimiters-depth-3-face :foreground orange)
-   (rainbow-delimiters-depth-4-face :foreground green)
-   (rainbow-delimiters-depth-5-face :foreground magenta)
-   (rainbow-delimiters-depth-6-face :foreground yellow)
+   (rainbow-delimiters-depth-1-face :foreground (doom-lighten cyan .20))
+   (rainbow-delimiters-depth-2-face :foreground magenta)
+   (rainbow-delimiters-depth-3-face :foreground base7)
+   (rainbow-delimiters-depth-4-face :foreground grey)
+   (rainbow-delimiters-depth-5-face :foreground blue)
+   (rainbow-delimiters-depth-6-face :foreground base6)
    (rainbow-delimiters-depth-7-face :foreground teal)
    ;;;; doom-modeline
    (doom-modeline-buffer-path       :foreground violet :bold bold)
-   (doom-modeline-buffer-major-mode :inherit 'doom-modeline-buffer-path))
+   (doom-modeline-buffer-major-mode :inherit 'doom-modeline-buffer-path)
+   ;;;; keywords
+   (font-lock-keyword-face :foreground yellow :bold bold)
+   (font-lock-number-face :foreground base6 :weight 'extra-light)
 
+  ;;;; line numbers
+   (line-number-current-line :foreground yellow :bold bold))
   ;; --- variables --------------------------
   ;; ()
   )
