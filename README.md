@@ -1,1 +1,1 @@
-#Gruber Darker theme using doom-themes api
+# Gruber Darker theme using doom-themes api
