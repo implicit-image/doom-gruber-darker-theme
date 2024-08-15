@@ -94,7 +94,7 @@ determine the exact padding."
                  (keywords       yellow)
                  (methods        teal)
                  (operators      yellow)
-                 (type           base6)
+                 (type           cyan)
                  (strings        green)
                  (variables      fg)
                  (numbers        base6)
