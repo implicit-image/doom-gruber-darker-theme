@@ -59,7 +59,7 @@ determine the exact padding."
                  (violet     '("#95a8af" "#b294bb" "brightmagenta"))
                  (cyan       '("#565f73" "#8abeb7" "cyan"))
                  (dark-cyan  (doom-darken cyan 0.4))
-                 (light-cyan (doom-lighten "#565f73" 0.2))
+                 (light-cyan (doom-lighten "#565f73" 0.5))
 
                  ;; face categories
                  (highlight      base7)
