@@ -134,14 +134,14 @@ determine the exact padding."
                  (rainbow-delimiters-depth-5-face :foreground blue)
                  (rainbow-delimiters-depth-6-face :foreground base6)
                  (rainbow-delimiters-depth-7-face :foreground teal)
-   ;;;; doom-modeline
+;;;; doom-modeline
                  (doom-modeline-buffer-path       :foreground violet :bold bold)
                  (doom-modeline-buffer-major-mode :inherit 'doom-modeline-buffer-path)
-   ;;;; keywords
-                 (font-lock-keyword-face :foreground yellow :bold bold)
-                 (font-lock-number-face :foreground base6 :weight 'extra-light)
-
-  ;;;; line numbers
+;;; child frame
+                 (child-frame-border :foreground fg :background fg)
+;;; company box
+                 (company-box-background :background base4)
+;;;; line numbers
                  (line-number-current-line :foreground yellow :bold bold :inherit '(hl-line default))
                  ;; --- variables --------------------------
                  ;; ()
