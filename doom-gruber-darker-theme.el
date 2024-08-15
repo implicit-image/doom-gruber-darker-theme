@@ -33,29 +33,6 @@ determine the exact padding."
 
 (def-doom-theme doom-gruber-darker
                 "A theme based on Alexey Kutepov's Gruber Darker theme."
-                ;; (gruber-darker-fg        '("#e4e4ef"))
-                ;; (gruber-darker-fg+1      '("#f4f4ff"))
-                ;; (gruber-darker-fg+2      '("#f5f5f5"))
-                ;; (gruber-darker-white     '("#ffffff"))
-                ;; (gruber-darker-black     '("#000000"))
-                ;; (gruber-darker-bg-1      '("#101010"))
-                ;; (gruber-darker-bg        '("#181818"))
-                ;; (gruber-darker-bg+1      '("#282828"))
-                ;; (gruber-darker-bg+2      '("#453d41"))
-                ;; (gruber-darker-bg+3      '("#484848"))
-                ;; (gruber-darker-bg+4      '("#52494e"))
-                ;; (gruber-darker-red-1     '("#c73c3f"))
-                ;; (gruber-darker-red       '("#f43841"))
-                ;; (gruber-darker-red+1     '("#ff4f58"))
-                ;; (gruber-darker-green     '("#73c936"))
-                ;; (gruber-darker-yellow    '("#ffdd33"))
-                ;; (gruber-darker-gray      '("#8b8b83"))
-                ;; (gruber-darker-quartz    '("#95a99f"))
-                ;; (gruber-darker-niagara-2 '("#303540"))
-                ;; (gruber-darker-niagara-1 '("#565f73"))
-                ;; (gruber-darker-niagara   '("#96a6c8"))
-                ;; (gruber-darker-wisteria  '("#9e95c7"))
-
                 ;; name        gui       256       16
                 ((bg         '("#181818" nil       nil          ))
                  (bg-alt     '("#282828" nil       nil          ))
