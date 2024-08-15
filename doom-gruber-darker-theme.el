@@ -4,13 +4,14 @@
 ;;
 ;; Added: March 19, 2024 (4c981f2cccf3)
 ;; Author: Błażej Niewiadomski <https://github.com/implicit-image>
-;; Maintainer:
+;; Maintainer: Błażej Niewiadomski <https://github.com/implicit-image>
 ;; Source: https://github.com/implicit-image/doom-gruber-darker
 ;;
 ;;; Commentary:
 ;;; Code:
 
 (require 'doom-themes)
+(require 'faces)
 
 
 ;;
