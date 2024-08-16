@@ -58,8 +58,6 @@ determine the exact padding."
                  (magenta    '("#96a6c8" "#c9b4cf" "magenta"))
                  (violet     '("#95a8af" "#b294bb" "brightmagenta"))
                  (cyan       '("#565f73" "#8abeb7" "cyan"))
-                 (dark-cyan  (doom-darken cyan 0.4))
-                 (light-cyan (doom-lighten "#565f73" 0.5))
 
                  ;; face categories
                  (highlight      base7)
@@ -68,12 +66,12 @@ determine the exact padding."
                  (builtin        yellow)
                  (comments       grey)
                  (doc-comments   (doom-lighten grey 0.14))
-                 (constants      base6)
+                 (constants      (doom-lighten cyan 0.4))
                  (functions      magenta)
                  (keywords       yellow)
                  (methods        teal)
                  (operators      yellow)
-                 (type           light-cyan)
+                 (type           base6)
                  (strings        green)
                  (variables      fg)
                  (numbers        base6)
@@ -105,7 +103,7 @@ determine the exact padding."
                   :background modeline-bg-alt :foreground modeline-fg-alt
                   :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-alt)))
 
-   ;;;; rainbow-delimiters
+;;;; rainbow-delimiters
                  (rainbow-delimiters-depth-1-face :foreground (doom-lighten cyan .20))
                  (rainbow-delimiters-depth-2-face :foreground magenta)
                  (rainbow-delimiters-depth-3-face :foreground base7)
@@ -122,6 +120,8 @@ determine the exact padding."
                  (company-box-background :background base4)
 ;;;; line numbers
                  (line-number-current-line :foreground yellow :bold bold :inherit '(hl-line default))
+;;; custom font lock
+                 (font-lock-property-name-face :foreground blue)
                  ;; --- variables --------------------------
                  ;; ()
                  ))
