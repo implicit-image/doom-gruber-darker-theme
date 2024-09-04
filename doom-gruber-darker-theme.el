@@ -122,7 +122,9 @@ determine the exact padding."
 ;;; child frame
                  (child-frame-border :foreground fg)
 ;;; selection
-		 (region :box '(:line-width 1 :color yellow :style nil))
+		 (region :box `(:line-width -1 :color ,yellow :style nil))
+		 (highlight :box `(:line-width -1 :color ,yellow :style nil))
+		 (selection :box `(:line-width -1 :color ,yellow :style nil))
 ;;; company box
                  (company-box-background :background (doom-lighten bg 0.3))
 ;;;; line numbers
