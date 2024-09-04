@@ -103,7 +103,11 @@ determine the exact padding."
                  (mode-line-inactive
                   :background modeline-bg-alt :foreground modeline-fg-alt
                   :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-alt)))
-
+;;;; font lock
+;;;; tree sitter
+                 (tree-sitter-hl-face:property :slant 'normal)
+                 (tree-sitter-hl-face:function.call :inherit '(font-lock-function-call-face))
+                 (tree-sitter-hl-face:method.call :inherit '(font-lock-function-call-face))
 ;;;; rainbow-delimiters
                  (rainbow-delimiters-depth-1-face :foreground (doom-lighten cyan .20))
                  (rainbow-delimiters-depth-2-face :foreground magenta)
@@ -116,13 +120,13 @@ determine the exact padding."
                  (doom-modeline-buffer-path       :foreground violet :bold bold)
                  (doom-modeline-buffer-major-mode :inherit 'doom-modeline-buffer-path)
 ;;; child frame
-                 (child-frame-border :foreground fg :background fg)
+                 (child-frame-border :foreground fg)
+;;; selection
+		 (region :box '(:line-width 1 :color yellow :style nil))
 ;;; company box
-                 (company-box-background :background base4)
+                 (company-box-background :background (doom-lighten bg 0.3))
 ;;;; line numbers
                  (line-number-current-line :foreground yellow :bold bold :inherit '(hl-line default))
-;;; custom font lock
-                 (font-lock-property-name-face :foreground blue)
                  ;; --- variables --------------------------
                  ;; ()
                  ))
