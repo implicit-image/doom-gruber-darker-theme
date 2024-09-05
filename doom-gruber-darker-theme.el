@@ -124,8 +124,6 @@ determine the exact padding."
 ;;; isearch
 		 (isearch :box `(:line-width -1 :color ,yellow :style nil))
 		 (isearch-fail :box `(:line-width -1 :color ,yellow :style nil))
-;;; hl-line
-		 (hl-line :box `(:line-width -1 :color ,yellow :style nil))
 ;;; company box
                  (company-box-background :background (doom-lighten bg 0.3))
 ;;;; line numbers
