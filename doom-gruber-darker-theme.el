@@ -116,6 +116,7 @@ determine the exact padding."
                  (rainbow-delimiters-depth-5-face :foreground blue)
                  (rainbow-delimiters-depth-6-face :foreground base6)
                  (rainbow-delimiters-depth-7-face :foreground teal)
+		 (rainbow-delimiters-depth-8-face :foreground (doom-lighten blue .30))
 ;;;; doom-modeline
                  (doom-modeline-buffer-path       :foreground violet :bold bold)
                  (doom-modeline-buffer-major-mode :inherit 'doom-modeline-buffer-path)
