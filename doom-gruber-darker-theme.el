@@ -103,7 +103,11 @@ determine the exact padding."
                  (mode-line-inactive
                   :background modeline-bg-alt :foreground modeline-fg-alt
                   :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-alt)))
-;;;; font lock
+;;;; window dividers
+		 (window-divider :background "#a1a1a1" :foreground "#a1a1a1")
+;;;; org-mode
+		 (org-mode )
+
 ;;;; tree sitter
                  (tree-sitter-hl-face:property :slant 'normal)
                  (tree-sitter-hl-face:function.call :inherit '(font-lock-function-call-face))
@@ -117,6 +121,37 @@ determine the exact padding."
                  (rainbow-delimiters-depth-6-face :foreground base6)
                  (rainbow-delimiters-depth-7-face :foreground teal)
 		 (rainbow-delimiters-depth-8-face :foreground (doom-lighten blue .30))
+;;;; modeline
+		 (mode-line :background base4)
+		 (mode-line-inactive :background base3)
+		 (mode-line-active :background base4)
+;;;; eldoc box
+		 (eldoc-box-body :box nil)
+		 (eldoc-box-border :width 'narrow :background fg-alt)
+;;;; show paren mode
+		 (show-paren-match (:background 'red :foreground 'unspecified))
+		 (show-paren-match-expression :box '(:line-width -1 :color base6 :style released-button)
+					      :foreground 'unspecified)
+;;;; diff-hl
+		 (diff-hl-margin-insert :background bg)
+		 (diff-hl-margin-delete :background bg)
+		 (diff-hl-margin-change :background bg)
+;;;; corfu
+		 (corfu-border :background base5)
+		 (corfu-current :background (doom-darken base4 0.2) :foreground 'unspecified)
+		 (corfu-default :background base0 :foreground 'unspecified)
+		 (corfu-popupinfo :box nil :background base1)
+		 (corfu-echo :foreground fg-alt)
+;;;; corfu-candidate-overlay
+		 (corfu-candidate-overlay-face :foreground doc-comments)
+;;;; lsp-ui-mode
+		 (lsp-ui-peek-header :background base6)
+		 (lsp-ui-peek-footer :background base6)
+		 (lsp-ui-peek-peek :background (doom-lighten bg 0.1))
+		 (lsp-ui-peek-list :background (doom-lighten bg 0.1))
+;;;; company
+		 (company-tooltip-common :foreground fg :underline t  :background (doom-darken bg 0.2))
+		 (company-tooltip :foreground fg :background (doom-darken bg 0.2))
 ;;;; doom-modeline
                  (doom-modeline-buffer-path       :foreground violet :bold bold)
                  (doom-modeline-buffer-major-mode :inherit 'doom-modeline-buffer-path)
