@@ -155,6 +155,8 @@ determine the exact padding."
 ;;;; doom-modeline
                  (doom-modeline-buffer-path       :foreground violet :bold bold)
                  (doom-modeline-buffer-major-mode :inherit 'doom-modeline-buffer-path)
+;;;; modeline
+		 (mode-line-active :box `())
 ;;;; child frame
                  (child-frame-border :foreground fg)
 ;;;; isearch
@@ -163,8 +165,8 @@ determine the exact padding."
 ;;;; company box
                  (company-box-background :background (doom-lighten bg 0.3))
 ;;;; font-lock
-		 (font-lock-comment-face :slant 'italic :foreground comments :background base0)
-		 (font-lock-doc-face :slant 'italic :foreground comments :background base0)
+		 (font-lock-comment-face :slant 'italic :foreground comments :background base3)
+		 (font-lock-doc-face :slant 'italic :foreground comments :background base3)
 ;;;; line numbers
                  (line-number-current-line :foreground yellow :bold bold :inherit '(hl-line default))
                  ;; --- variables --------------------------
