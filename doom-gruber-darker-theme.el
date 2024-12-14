@@ -163,8 +163,8 @@ determine the exact padding."
 ;;;; company box
                  (company-box-background :background (doom-lighten bg 0.3))
 ;;;; font-lock
-		 (font-lock-comment-face :slant 'italic)
-		 (font-lock-doc-face :slant 'italic)
+		 (font-lock-comment-face :slant 'italic :foreground comments :background base0)
+		 (font-lock-doc-face :slant 'italic :foreground comments :background base0)
 ;;;; line numbers
                  (line-number-current-line :foreground yellow :bold bold :inherit '(hl-line default))
                  ;; --- variables --------------------------
