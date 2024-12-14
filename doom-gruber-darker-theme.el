@@ -130,7 +130,7 @@ determine the exact padding."
 		 (eldoc-box-border :width 'narrow :background fg-alt)
 ;;;; show paren mode
 		 (show-paren-match (:background 'red :foreground 'unspecified))
-		 (show-paren-match-expression :box '(:line-width -1 :color base6 :style released-button)
+		 (show-paren-match-expression :box `(:line-width -1 :color ,base6 :style released-button)
 					      :foreground 'unspecified)
 ;;;; diff-hl
 		 (diff-hl-margin-insert :background bg)
