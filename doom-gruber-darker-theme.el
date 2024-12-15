@@ -122,9 +122,9 @@ determine the exact padding."
                  (rainbow-delimiters-depth-7-face :foreground teal)
 		 (rainbow-delimiters-depth-8-face :foreground (doom-lighten blue .30))
 ;;;; modeline
-		 (mode-line :background base4)
-		 (mode-line-inactive :background base3)
-		 (mode-line-active :background base4)
+		 (mode-line :box `(:line-width -1 :color ,grey :style 'pressed-button) :background base4)
+		 (mode-line-inactive  :box `(:line-width -1 :color ,grey :style 'pressed-button) :background base3)
+		 (mode-line-active :box `(:line-width -1 :color ,grey :style 'pressed-button) :background base4)
 ;;;; eldoc box
 		 (eldoc-box-body :box nil)
 		 (eldoc-box-border :width 'narrow :background fg-alt)
@@ -155,8 +155,6 @@ determine the exact padding."
 ;;;; doom-modeline
                  (doom-modeline-buffer-path       :foreground violet :bold bold)
                  (doom-modeline-buffer-major-mode :inherit 'doom-modeline-buffer-path)
-;;;; modeline
-		 (mode-line-active :box `())
 ;;;; child frame
                  (child-frame-border :foreground fg)
 ;;;; isearch
