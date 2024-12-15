@@ -105,9 +105,12 @@ determine the exact padding."
                   :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-alt)))
 ;;;; window dividers
 		 (window-divider :background "#a1a1a1" :foreground "#a1a1a1")
-;;;; org-mode
-		 (org-mode )
 
+;;;; org mode
+		 (org-imminent-deadline :foregorund orange :box `(:line-width -1 :color ,orange :style nil))
+
+;;;; org agenda
+;;;; org babel
 ;;;; tree sitter
                  (tree-sitter-hl-face:property :slant 'normal)
                  (tree-sitter-hl-face:function.call :inherit '(font-lock-function-call-face))
