@@ -125,9 +125,9 @@ determine the exact padding."
                  (rainbow-delimiters-depth-7-face :foreground teal)
 		 (rainbow-delimiters-depth-8-face :foreground (doom-lighten blue .30))
 ;;;; modeline
-		 (mode-line :box `(:line-width -1 :color ,grey :style 'pressed-button) :background base4)
-		 (mode-line-inactive  :box `(:line-width -1 :color ,grey :style 'pressed-button) :background base3)
-		 (mode-line-active :box `(:line-width -1 :color ,grey :style 'pressed-button) :background base4)
+		 (mode-line :box `(:line-width 1 :color ,grey :style 'pressed-button) :background base4)
+		 (mode-line-inactive  :box `(:line-width 1 :color ,grey :style 'pressed-button) :background base3)
+		 (mode-line-active :box `(:line-width 1 :color ,grey :style 'pressed-button) :background base4)
 ;;;; eldoc box
 		 (eldoc-box-body :box nil)
 		 (eldoc-box-border :width 'narrow :background fg-alt)
