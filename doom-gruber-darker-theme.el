@@ -125,9 +125,9 @@ determine the exact padding."
                  (rainbow-delimiters-depth-7-face :foreground teal)
 		 (rainbow-delimiters-depth-8-face :foreground (doom-lighten blue .30))
 ;;;; modeline
-		 (mode-line :box `(:line-width 1 :color ,grey :style 'pressed-button) :background base4)
-		 (mode-line-inactive  :box `(:line-width 1 :color ,grey :style 'pressed-button) :background base3)
-		 (mode-line-active :box `(:line-width 1 :color ,grey :style 'pressed-button) :background base4)
+		 (mode-line :background base4)
+		 (mode-line-inactive :background base3)
+		 (mode-line-active :background base4)
 ;;;; eldoc box
 		 (eldoc-box-body :box nil)
 		 (eldoc-box-border :width 'narrow :background fg-alt)
@@ -136,9 +136,9 @@ determine the exact padding."
 		 (show-paren-match-expression :box `(:line-width -1 :color ,base6 :style released-button)
 					      :foreground 'unspecified)
 ;;;; diff-hl
-		 (diff-hl-margin-insert :background bg)
-		 (diff-hl-margin-delete :background bg)
-		 (diff-hl-margin-change :background bg)
+		 (diff-hl-margin-insert :background bg :foreground green)
+		 (diff-hl-margin-delete :background bg :foreground red)
+		 (diff-hl-margin-change :background bg :foreground base6)
 ;;;; corfu
 		 (corfu-border :background base5)
 		 (corfu-current :background (doom-darken base4 0.2) :foreground 'unspecified)
