@@ -107,8 +107,9 @@ determine the exact padding."
 		 (window-divider :background "#a1a1a1" :foreground "#a1a1a1")
 
 ;;;; org mode
-		 (org-imminent-deadline :foregorund orange :box `(:line-width -1 :color ,orange :style nil))
-
+		 (org-imminent-deadline :box `(:line-width -1 :color ,orange :style nil) :foreground orange)
+		 (org-block-begin-line :box `(:line-width -1 :color ,grey :style nil) :foreground grey  :background grey)
+		 (org-block-end-line :box `(:line-width -1 :color ,grey :style nil) :foreground grey :background grey)
 ;;;; org agenda
 ;;;; org babel
 ;;;; tree sitter
