@@ -138,7 +138,7 @@ determine the exact padding."
 		 (eldoc-box-body :box nil)
 		 (eldoc-box-border :width 'narrow :background fg-alt)
 ;;;; show paren mode
-		 (show-paren-match (:background 'red :foreground 'unspecified))
+		 (show-paren-match :background red :foreground 'unspecified))
 		 (show-paren-match-expression :box `(:line-width -1 :color ,base6 :style released-button)
 					      :foreground 'unspecified)
 ;;;; diff-hl
@@ -149,15 +149,13 @@ determine the exact padding."
 		 (corfu-border :background base5)
 		 (corfu-current :background (doom-darken base4 0.2) :foreground 'unspecified)
 		 (corfu-default :background base0 :foreground 'unspecified)
-		 (corfu-popupinfo :box nil :background base1)
-		 (corfu-echo :foreground fg-alt)
-;;;; corfu-candidate-overlay
-		 (corfu-candidate-overlay-face :foreground doc-comments)
+		 (corfu-popupinfo :box nil :background base1 :foreground fg-alt)
+		 (corfu-echo :background bg-alt :foreground fg-alt)
 ;;;; lsp-ui-mode
-		 (lsp-ui-peek-header :background base6)
-		 (lsp-ui-peek-footer :background base6)
-		 (lsp-ui-peek-peek :background (doom-lighten bg 0.1))
-		 (lsp-ui-peek-list :background (doom-lighten bg 0.1))
+		 (lsp-ui-peek-header :background base6 :foreground fg-alt)
+		 (lsp-ui-peek-footer :background base6 :foreground fg-alt)
+		 (lsp-ui-peek-peek :background (doom-lighten bg 0.1) :foreground fg-alt)
+		 (lsp-ui-peek-list :background (doom-lighten bg 0.1) :foreground fg-alt)
 ;;;; company
 		 (company-tooltip-common :foreground fg :underline t  :background (doom-darken bg 0.2))
 		 (company-tooltip :foreground fg :background (doom-darken bg 0.2))
@@ -165,7 +163,7 @@ determine the exact padding."
                  (doom-modeline-buffer-path       :foreground violet :bold bold)
                  (doom-modeline-buffer-major-mode :inherit 'doom-modeline-buffer-path)
 ;;;; child frame
-                 (child-frame-border :foreground fg)
+                 (child-frame-border :foreground fg :background fg)
 ;;;; isearch
 		 (isearch :box `(:line-width -1 :color ,yellow :style nil))
 		 (isearch-fail :box `(:line-width -1 :color ,yellow :style nil))
