@@ -115,7 +115,7 @@ determine the exact padding."
 		 (org-meta-line :background bg-alt :foreground comments :extend t)
 		 (org-todo :box `(:line-width -1 :color ,green :style nil) :background bg :foreground green)
 		 (org-done :box `(:line-width -1 :color ,base5 :style nil) :background bg :foreground base5)
-		 (org-checkbox :box `(:line-width -1 :color ,green :style nil) :background bg :foreground green))
+		 (org-checkbox :box `(:line-width -1 :color ,green :style nil) :background bg :foreground green)
 ;;;; org agenda
 ;;;; org babel
 ;;;; tree sitter
