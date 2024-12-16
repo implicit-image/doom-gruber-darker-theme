@@ -113,8 +113,8 @@ determine the exact padding."
 		 (org-document-info-keyword :box `(:line-width -1 :color ,base5 :style nil) :foreground base5 :background bg)
 		 (org-special-keyword :box `(:line-width -1 :color ))
 		 (org-meta-line :background bg-alt :foreground comments :extend t)
-		 (org-todo :box `(:line-width -1 :color green :style nil) :background bg :foreground green)
-		 (org-done :box `(:line-width -1 :color base5 :style nil) :background bg :foreground base5)
+		 (org-todo :box `(:line-width -1 :color ,green :style nil) :background bg :foreground green)
+		 (org-done :box `(:line-width -1 :color ,base5 :style nil) :background bg :foreground base5)
 		 (org-checkbox :box `(:line-width -1 :color ,green :style nil :background bg :foreground green))
 ;;;; org agenda
 ;;;; org babel
