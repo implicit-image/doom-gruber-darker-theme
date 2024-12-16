@@ -105,7 +105,6 @@ determine the exact padding."
                   :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-alt)))
 ;;;; window dividers
 		 (window-divider :background "#a1a1a1" :foreground "#a1a1a1")
-
 ;;;; org mode
 		 (org-imminent-deadline :box `(:line-width -1 :color ,orange :style nil) :foreground orange)
 		 (org-block-begin-line :box `(:line-width -1 :color ,grey :style nil) :foreground grey  :background bg-alt :extend t)
@@ -138,7 +137,7 @@ determine the exact padding."
 		 (eldoc-box-body :box nil)
 		 (eldoc-box-border :width 'narrow :background fg-alt)
 ;;;; show paren mode
-		 (show-paren-match :background red :foreground 'unspecified))
+		 (show-paren-match :background red :foreground 'unspecified)
 		 (show-paren-match-expression :box `(:line-width -1 :color ,base6 :style released-button)
 					      :foreground 'unspecified)
 ;;;; diff-hl
@@ -149,7 +148,7 @@ determine the exact padding."
 		 (corfu-border :background base5)
 		 (corfu-current :background (doom-darken base4 0.2) :foreground 'unspecified)
 		 (corfu-default :background base0 :foreground 'unspecified)
-		 (corfu-popupinfo :box nil :background base1 :foreground fg-alt)
+		 (corfu-popupinfo :background base1 :foreground fg-alt)
 		 (corfu-echo :background bg-alt :foreground fg-alt)
 ;;;; lsp-ui-mode
 		 (lsp-ui-peek-header :background base6 :foreground fg-alt)
