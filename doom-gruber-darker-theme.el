@@ -34,8 +34,8 @@ determine the exact padding."
 (def-doom-theme doom-gruber-darker
     "A theme based on Alexey Kutepov's Gruber Darker theme."
   ;; name        gui       256       16
-  ((bg         '("#181818" nil       nil          ))
-   (bg-alt     '("#282828" nil       nil          ))
+  ((bg         '("#151515" nil       nil          ))
+   (bg-alt     '("#252525" nil       nil          ))
    (base0      '("#0d0d0d" "black"   "black"      ))
    (base1      '("#1b1b1b" "#1b1b1b"              ))
    (base2      '("#212122" "#1e1e1e"              ))
@@ -92,8 +92,8 @@ determine the exact padding."
    (-modeline-pad
     (when doom-gruber-darker-padded-modeline
       (if (integerp doom-gruber-darker-padded-modeline)
-	  doom-gruber-darker-padded-modeline
-	4))))
+          doom-gruber-darker-padded-modeline
+        4))))
 
   ;; --- faces ------------------------------
   (
@@ -139,7 +139,7 @@ determine the exact padding."
 ;;;; show paren mode
    (show-paren-match :background red :foreground 'unspecified)
    (show-paren-match-expression :box `(:line-width -1 :color ,base6 :style released-button)
-				:foreground 'unspecified)
+                                :foreground 'unspecified)
 ;;;; diff-hl
    (diff-hl-margin-insert :background bg :foreground green)
    (diff-hl-margin-delete :background bg :foreground red)
