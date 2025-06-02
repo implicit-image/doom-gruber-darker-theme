@@ -78,7 +78,7 @@ determine the exact padding."
    (numbers        base6)
    (region         selection)
    (error          red)
-   (warning        orange)
+   (warning        (doom-lighten orange 0.3))
    (success        green)
    (vc-modified    fg-alt)
    (vc-added       green)
