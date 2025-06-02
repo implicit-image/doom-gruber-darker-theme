@@ -85,8 +85,8 @@ determine the exact padding."
    (vc-deleted     red)
 
    ;; custom categories
-   (modeline-bg     `(,(doom-darken (car bg-alt) 0.3) ,@(cdr base3)))
-   (modeline-bg-alt `(,(car bg) ,@(cdr base1)))
+   (modeline-bg     `(,(doom-darken (car bg-alt) 0.6) ,@(cdr base3)))
+   (modeline-bg-alt `(,(doom-darken (car bg-alt) 0.8) ,@(cdr base3)))
    (modeline-fg     base8)
    (modeline-fg-alt comments)
    (-modeline-pad
