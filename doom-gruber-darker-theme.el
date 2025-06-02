@@ -22,7 +22,7 @@
   :group 'doom-themes)
 
 (defcustom doom-gruber-darker-padded-modeline doom-themes-padded-modeline
-  "If non-nil, adds a 4px padding to the mode-line. Can be an integer to
+  "If non-nil, adds a 4px padding to the mode-line.  Can be an integer to\
 determine the exact padding."
   :group 'doom-gruber-darker-theme
   :type '(choice integer boolean))
