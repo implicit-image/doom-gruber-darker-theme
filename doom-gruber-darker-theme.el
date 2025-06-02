@@ -135,43 +135,45 @@ determine the exact padding."
    (mode-line :background base4)
    (mode-line-inactive :background base3)
    (mode-line-active :background base4)
+;;;; header line
+   (header-line :background bg-alt)
 ;;;; eldoc box
    (eldoc-box-body :box nil)
-   (eldoc-box-border :width 'narrow :background fg-alt)
+   (eldoc-box-border :width 'narrow :background base1)
 ;;;; show paren mode
    (show-paren-match :background red :foreground 'unspecified)
-   (show-paren-match-expression :box `( :line-width -1
-                                        :color ,base6
-                                        :style released-button)
-                                :foreground 'unspecified)
+   (show-paren-match-expression :box nil
+                                :foreground base4)
 ;;;; diff-hl
    (diff-hl-margin-insert :background bg :foreground green)
    (diff-hl-margin-delete :background bg :foreground red)
    (diff-hl-margin-change :background bg :foreground base6)
 ;;;; corfu
-   (corfu-border :background base5 :foreground fg)
+   (corfu-border :background base5 :foreground fg-alt)
    (corfu-current :background (doom-lighten bg-alt 0.2) :foreground fg)
    (corfu-default :background base0 :foreground 'unspecified)
    (corfu-popupinfo :background base0 :foreground fg)
-   (corfu-echo :background bg-alt :foreground fg-alt)
-;;;; lsp-ui-mode
-   (lsp-ui-peek-header :background base6 :foreground fg-alt)
-   (lsp-ui-peek-footer :background base6 :foreground fg-alt)
+   (corfu-echo :background bg :foreground fg)
+;;;; lsp
+   (lsp-lens-face :height 1)
+   (lsp-signature-highlight-function-argument :background fg-alt
+                                              :slant 'italic)
+   (lsp-ui-peek-header :background bg :foreground fg-alt)
+   (lsp-ui-peek-footer :background bg :foreground fg-alt)
    (lsp-ui-peek-peek :background (doom-lighten bg 0.1) :foreground fg-alt)
    (lsp-ui-peek-list :background (doom-lighten bg 0.1) :foreground fg-alt)
+   (lsp-ui-doc-background :background bg-alt)
 ;;;; company
    (company-tooltip-common :foreground fg
                            :underline t
                            :background (doom-darken bg 0.2))
-   (company-tooltip :foreground fg :background (doom-darken bg 0.2))
+   (company-tooltip :foreground fg :background (doom-darken base4 0.4))
+   (company-tooltip-selection :background bg)
 ;;;; doom-modeline
    (doom-modeline-buffer-path       :foreground violet :bold bold)
    (doom-modeline-buffer-major-mode :inherit 'doom-modeline-buffer-path)
 ;;;; child frame
    (child-frame-border :foreground fg :background fg)
-;;;; isearch
-   (isearch :box `(:line-width -1 :color ,yellow :style nil))
-   (isearch-fail :box `(:line-width -1 :color ,yellow :style nil))
 ;;;; company box
    (company-box-background :background (doom-lighten bg 0.3))
 ;;;; font-lock
@@ -180,8 +182,50 @@ determine the exact padding."
 ;;;; line numbers
    (line-number-current-line :foreground yellow :bold bold
                              :inherit '(hl-line default))
+   (whitespace-space :foreground fg-alt)
+   (whitespace-hspace :foreground bg
+                      :background bg)
+   (whitespace-indentation :foreground base4
+                           :background base4)
+   (menu :background bg-alt
+         :foreground fg)
+   (tool-bar :background bg-alt
+             :foreground fg)
+   (secondary-selection :background selection)
+   (region :weight 'bold
+           :background (doom-lighten selection 0.18))
+   (variable-pitch :foreground fg-alt)
+   (flymake-end-of-line-diagnostics-face :box nil
+                                         :background selection)
+;;;; sideline
+   (sideline-lsp-code-action :foreground base6)
+   (sideline-blame :slant 'normal
+                   :height 1
+                   :background bg-alt
+                   :foreground base6)
+;;;; treemacs
+   (treemacs-root-face :background bg-alt
+                       :foreground blue)
+;;;; avy
+   (avy-lead-face :background violet)
+;;;; meow
+   (meow-insert-indicator :background base4
+                          :extend t)
+   (meow-beacon-indicator :background blue
+                          :foreground bg-alt)
+   (meow-motion-indicator :background dark-cyan
+                          :foreground bg-alt)
+   (meow-normal-indicator :background warning
+                          :foreground bg-alt)
+   (meow-keypad-indicator :background violet
+                          :foreground bg-alt)
+   (meow-search-indicator :background bg-alt
+                          :foreground base6)
+;;;; devdocs
+   (devdocs-code-block :background base4
+                       :extend t)
    ;; --- variables --------------------------
    ;; ()
-   ))
+))
 
 ;;; doom-gruber-darker-theme.el ends here
