@@ -49,7 +49,7 @@ determine the exact padding."
    (fg-alt     (doom-darken fg 0.4))
    (grey       '("#8b8b83"))
    (red        '("#f43841" "#ee6666" "red"))
-   (orange     '("#de935f" "#dd9955" "brightred"))
+   (orange     '("#ef532f" "#dd9955" "brightred"))
    (yellow     '("#ffdd33" "#ffdd33" "yellow"))
    (green      '("#73c936" "#73c936" "green"))
    (blue       '("#81a2be" "#88aabb" "brightblue"))
@@ -106,17 +106,19 @@ determine the exact padding."
 ;;;; window dividers
    (window-divider :background "#a1a1a1" :foreground "#a1a1a1")
 ;;;; org mode
-   (org-imminent-deadline :box `(:line-width -1 :color ,orange :style nil) :foreground orange)
+   (org-imminent-deadline :box `(:line-width -1 :color ,orange :style nil)
+                          :foreground orange)
    (org-block-begin-line :foreground grey  :background bg-alt :extend t)
    (org-block-end-line :foreground grey :background bg-alt :extend t)
-   (org-document-info-keyword :box `(:line-width -1 :color ,base5 :style nil) :background bg :foreground base5)
+   (org-document-info-keyword :box `(:line-width -1 :color ,base5 :style nil)
+                              :background bg
+                              :foreground base5)
    (org-meta-line :background bg-alt :foreground comments :extend t)
-   (org-todo :box `(:line-width -1 :color ,green :style nil) :background bg :foreground green)
-   (org-done :box `(:line-width -1 :color ,base5 :style nil) :background bg :foreground base5)
-   (org-drawer :box `(:line-width -1 :color ,grey :style nil) :background bg :foreground grey)
-;;;; org agenda
-;;;; org babel
-;;;; tree sitter
+   (org-todo :background bg :foreground green)
+   (org-done :background bg :foreground base5)
+   (org-drawer :box `(:line-width -1 :color ,grey :style nil)
+               :background bg
+               :foreground grey)
    (tree-sitter-hl-face:property :slant 'normal)
    (tree-sitter-hl-face:function.call :inherit '(font-lock-function-call-face))
    (tree-sitter-hl-face:method.call :inherit '(font-lock-function-call-face))
@@ -138,7 +140,9 @@ determine the exact padding."
    (eldoc-box-border :width 'narrow :background fg-alt)
 ;;;; show paren mode
    (show-paren-match :background red :foreground 'unspecified)
-   (show-paren-match-expression :box `(:line-width -1 :color ,base6 :style released-button)
+   (show-paren-match-expression :box `( :line-width -1
+                                        :color ,base6
+                                        :style released-button)
                                 :foreground 'unspecified)
 ;;;; diff-hl
    (diff-hl-margin-insert :background bg :foreground green)
@@ -156,7 +160,9 @@ determine the exact padding."
    (lsp-ui-peek-peek :background (doom-lighten bg 0.1) :foreground fg-alt)
    (lsp-ui-peek-list :background (doom-lighten bg 0.1) :foreground fg-alt)
 ;;;; company
-   (company-tooltip-common :foreground fg :underline t  :background (doom-darken bg 0.2))
+   (company-tooltip-common :foreground fg
+                           :underline t
+                           :background (doom-darken bg 0.2))
    (company-tooltip :foreground fg :background (doom-darken bg 0.2))
 ;;;; doom-modeline
    (doom-modeline-buffer-path       :foreground violet :bold bold)
@@ -172,7 +178,8 @@ determine the exact padding."
    (font-lock-comment-face :slant 'italic :foreground comments)
    (font-lock-doc-face :slant 'italic :foreground comments)
 ;;;; line numbers
-   (line-number-current-line :foreground yellow :bold bold :inherit '(hl-line default))
+   (line-number-current-line :foreground yellow :bold bold
+                             :inherit '(hl-line default))
    ;; --- variables --------------------------
    ;; ()
    ))
