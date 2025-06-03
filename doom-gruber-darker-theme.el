@@ -187,10 +187,12 @@ determine the exact padding."
                       :background bg)
    (whitespace-indentation :foreground base4
                            :background base4)
-   (menu :background bg-alt
+   (menu :background base0
+         :box nil
          :foreground fg)
-   (tool-bar :background bg-alt
-             :foreground fg)
+   (tool-bar :background bg
+             :foreground fg
+             :box nil)
    (secondary-selection :background selection)
    (region :weight 'bold
            :background (doom-lighten selection 0.18))
@@ -213,7 +215,7 @@ determine the exact padding."
                           :extend t)
    (meow-beacon-indicator :background blue
                           :foreground bg-alt)
-   (meow-motion-indicator :background dark-cyan
+   (meow-motion-indicator :background cyan
                           :foreground bg-alt)
    (meow-normal-indicator :background warning
                           :foreground bg-alt)
@@ -226,6 +228,6 @@ determine the exact padding."
                        :extend t)
    ;; --- variables --------------------------
    ;; ()
-))
+   ))
 
 ;;; doom-gruber-darker-theme.el ends here
