@@ -216,7 +216,7 @@ determine the exact padding."
    (meow-beacon-indicator :background blue
                           :foreground bg-alt)
    (meow-motion-indicator :background cyan
-                          :foreground bg-alt)
+                          :foreground fg)
    (meow-normal-indicator :background warning
                           :foreground bg-alt)
    (meow-keypad-indicator :background violet
