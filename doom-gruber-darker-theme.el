@@ -194,6 +194,9 @@ determine the exact padding."
    (tool-bar :background bg
              :foreground fg
              :box nil)
+;;;; popup
+   (popup-tip-face :background bg-alt
+                   :foreground fg)
 ;;;; tty menu
    (tty-menu-enabled-face :background bg-alt
                           :foreground fg
