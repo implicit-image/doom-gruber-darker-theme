@@ -194,6 +194,16 @@ determine the exact padding."
    (tool-bar :background bg
              :foreground fg
              :box nil)
+;;;; tty menu
+   (tty-menu-enabled-face :background bg-alt
+                          :foreground fg
+                          :weight 'bold)
+   (tty-menu-disabled-face :background selection
+                           :foreground fg
+                           :weight 'normal)
+   (tty-menu-selected-face :background blue
+                           :foreground fg
+                           :weight 'bold)
    (secondary-selection :background selection)
    (region :weight 'bold
            :background (doom-lighten selection 0.18))
