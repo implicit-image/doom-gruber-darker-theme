@@ -157,6 +157,7 @@ determine the exact padding."
 ;;;; lsp
    (lsp-lens-face :height 1)
    (lsp-signature-highlight-function-argument :background fg-alt
+                                              :foreground bg
                                               :slant 'italic)
    (lsp-ui-peek-header :background bg :foreground fg-alt)
    (lsp-ui-peek-footer :background bg :foreground fg-alt)
