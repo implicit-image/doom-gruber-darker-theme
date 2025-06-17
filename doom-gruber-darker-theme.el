@@ -216,7 +216,7 @@ determine the exact padding."
 ;;;; sideline
    (sideline-lsp-code-action :foreground base6)
    (sideline-blame :slant 'normal
-                   :height 1
+                   :height 1.0
                    :background bg-alt
                    :foreground base6)
 ;;;; treemacs
