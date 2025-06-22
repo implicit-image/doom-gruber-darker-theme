@@ -216,6 +216,7 @@ determine the exact padding."
 ;;;; sideline
    (sideline-lsp-code-action :foreground base6)
    (sideline-blame :slant 'normal
+                   :extend t
                    :height 1.0
                    :background bg-alt
                    :foreground base6)
@@ -224,6 +225,9 @@ determine the exact padding."
                        :foreground blue)
 ;;;; avy
    (avy-lead-face :background violet)
+;;;; anzu
+   (anzu-mode-line :foreground fg
+                   :weight 'bold)
 ;;;; meow
    (meow-insert-indicator :background base4
                           :extend t)
