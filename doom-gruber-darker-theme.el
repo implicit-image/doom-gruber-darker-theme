@@ -143,7 +143,7 @@ determine the exact padding."
 ;;;; show paren mode
    (show-paren-match :background red :foreground 'unspecified)
    (show-paren-match-expression :box nil
-                                :background (doom-darken selection 0.1))
+                                :background bg)
 ;;;; diff-hl
    (diff-hl-margin-insert :background bg :foreground green)
    (diff-hl-margin-delete :background bg :foreground red)
