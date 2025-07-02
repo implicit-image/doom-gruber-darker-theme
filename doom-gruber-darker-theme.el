@@ -144,6 +144,9 @@ determine the exact padding."
    (show-paren-match :background red :foreground 'unspecified)
    (show-paren-match-expression :box nil
                                 :background bg)
+;;;; window-stool
+   (window-stool-face :background bg-alt
+                      :foreground fg-alt)
 ;;;; diff-hl
    (diff-hl-margin-insert :background bg :foreground green)
    (diff-hl-margin-delete :background bg :foreground red)
