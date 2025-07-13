@@ -168,10 +168,10 @@ determine the exact padding."
    (lsp-ui-peek-list :background (doom-lighten bg 0.1) :foreground fg-alt)
    (lsp-ui-doc-background :background bg-alt)
 ;;;; company
-   (company-tooltip-common :weight 'bold
+   (company-tooltip-common :weight 'semi-bold
                            :inherit 'company-tooltip)
-   (company-tooltip :foreground fg :background (doom-darken bg 0.1))
-   (company-tooltip-selection :background bg)
+   (company-tooltip :foreground fg :background base0)
+   (company-tooltip-selection :background base1)
 ;;;; doom-modeline
    (doom-modeline-buffer-path       :foreground violet :bold bold)
    (doom-modeline-buffer-major-mode :inherit 'doom-modeline-buffer-path)
