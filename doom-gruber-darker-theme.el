@@ -212,7 +212,8 @@ determine the exact padding."
    (secondary-selection :background selection
                         :extend nil)
    (region :weight 'bold
-           :background (doom-lighten selection 0.18))
+           :background (doom-lighten selection 0.18)
+           :extend nil)
    (variable-pitch :foreground fg-alt)
    (flymake-end-of-line-diagnostics-face :box nil
                                          :background selection)
@@ -244,6 +245,7 @@ determine the exact padding."
                           :foreground bg-alt)
    (meow-search-indicator :background bg-alt
                           :foreground base6)
+   (meow-beacon-fake-selection :extend nil)
 ;;;; devdocs
    (devdocs-code-block :background base4
                        :extend t)
