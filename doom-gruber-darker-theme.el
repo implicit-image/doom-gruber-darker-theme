@@ -209,7 +209,8 @@ determine the exact padding."
    (tty-menu-selected-face :background blue
                            :foreground fg
                            :weight 'bold)
-   (secondary-selection :background selection)
+   (secondary-selection :background selection
+                        :extend nil)
    (region :weight 'bold
            :background (doom-lighten selection 0.18))
    (variable-pitch :foreground fg-alt)
