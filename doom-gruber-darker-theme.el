@@ -209,8 +209,8 @@ determine the exact padding."
    (tty-menu-selected-face :background blue
                            :foreground fg
                            :weight 'bold)
-   (secondary-selection :background selection
-                        :extend nil)
+   (secondary-selection :background (doom-brighten 0.05 bg)
+                        :extend t)
    (variable-pitch :foreground fg-alt)
    (flymake-end-of-line-diagnostics-face :box nil
                                          :background selection)
