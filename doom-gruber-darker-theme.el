@@ -209,7 +209,7 @@ determine the exact padding."
    (tty-menu-selected-face :background blue
                            :foreground fg
                            :weight 'bold)
-   (secondary-selection :background (doom-brighten 0.05 bg)
+   (secondary-selection :background (doom-lighten bg 0.05)
                         :extend t)
    (variable-pitch :foreground fg-alt)
    (flymake-end-of-line-diagnostics-face :box nil
@@ -242,7 +242,8 @@ determine the exact padding."
                           :foreground bg-alt)
    (meow-search-indicator :background bg-alt
                           :foreground base6)
-   (meow-beacon-fake-selection :background selection)
+   (meow-beacon-fake-selection :background (doom-lighten selection 0.05))
+   (meow-beacon-fake-cursor :background (doom-lighten selection 0.05))
 ;;;; devdocs
    (devdocs-code-block :background base4
                        :extend t)
