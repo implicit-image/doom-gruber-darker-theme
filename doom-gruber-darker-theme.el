@@ -13,7 +13,7 @@
 (require 'doom-themes)
 (require 'faces)
 
-
+(message "loaded gruber")
 ;;
 ;;; Variables
 
@@ -63,7 +63,7 @@ determine the exact padding."
    ;; face categories
    (highlight      base7)
    (vertical-bar   base0)
-   (selection      `(,(car (doom-lighten bg 0.1)) ,@(cdr base4)))
+   (selection      `(,(car (doom-lighten bg 0.05)) ,@(cdr base4)))
    (builtin        yellow)
    (comments       grey)
    (doc-comments   (doom-lighten grey 0.14))
@@ -76,7 +76,7 @@ determine the exact padding."
    (strings        green)
    (variables      fg)
    (numbers        base6)
-   (region         (doom-lighten selection 0.05))
+   (region         (doom-lighten selection 0.04))
    (error          red)
    (warning        (doom-lighten orange 0.3))
    (success        green)
@@ -209,7 +209,8 @@ determine the exact padding."
    (tty-menu-selected-face :background blue
                            :foreground fg
                            :weight 'bold)
-   (secondary-selection :background (doom-lighten bg 0.05)
+   (secondary-selection :background bg
+                        :foreground 'unspecified
                         :extend t)
    (variable-pitch :foreground fg-alt)
    (flymake-end-of-line-diagnostics-face :box nil
@@ -242,8 +243,13 @@ determine the exact padding."
                           :foreground bg-alt)
    (meow-search-indicator :background bg-alt
                           :foreground base6)
-   (meow-beacon-fake-selection :background (doom-lighten selection 0.05))
-   (meow-beacon-fake-cursor :background (doom-lighten selection 0.05))
+   (meow-search-highlight :weight 'bold
+                          :inherit 'region)
+   (meow-beacon-fake-selection :background (doom-lighten selection 0.1)
+                               :weight 'bold
+                               :inherit 'region)
+   (region :weight 'bold
+           :background (doom-lighten selection 0.1))
 ;;;; devdocs
    (devdocs-code-block :background base4
                        :extend t)
