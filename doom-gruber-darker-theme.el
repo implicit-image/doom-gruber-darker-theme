@@ -83,8 +83,8 @@ determine the exact padding."
    (vc-deleted     red)
 
    ;; custom categories
-   (modeline-bg     `(,(doom-darken (car bg) 0.9) ,@(cdr base3)))
-   (modeline-bg-alt `(,(doom-darken (car bg) 0.8) ,@(cdr base3)))
+   (modeline-bg     `(,(doom-lighten (car bg) 0.15) ,@(cdr base3)))
+   (modeline-bg-alt `(,(doom-lighten (car bg) 0.1) ,@(cdr base3)))
    (modeline-fg     base8)
    (modeline-fg-alt comments)
    (-modeline-pad
@@ -95,13 +95,15 @@ determine the exact padding."
   ;; --- faces ------------------------------
   (
    (mode-line
-    :background modeline-bg :foreground modeline-fg
+    :background modeline-bg :foreground modeline-fg :overline nil
     :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg)))
    (mode-line-inactive
-    :background modeline-bg-alt :foreground modeline-fg-alt
+    :background modeline-bg-alt :foreground modeline-fg-alt :overline nil
     :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-alt)))
 ;;;; window dividers
-   (window-divider :background "#a1a1a1" :foreground "#a1a1a1")
+   (window-divider :background fg :foreground fg)
+   (internal-border :background bg :width 'narrow)
+   (border :background bg :foreground fg :width 'narrow)
 ;;;; org mode
    (org-imminent-deadline :box `(:line-width -1 :color ,orange :style nil)
                           :foreground orange)
@@ -116,6 +118,12 @@ determine the exact padding."
    (org-drawer :box `(:line-width -1 :color ,grey :style nil)
                :background bg
                :foreground grey)
+   (org-transclusion :background bg-alt)
+;;;; yasnippet
+   (yas-field-highlight-face :weight regular)
+;;;; markdown
+   (markdown-code-face :background bg-alt)
+   ;;;; treesitter
    (tree-sitter-hl-face:property :slant 'normal)
    (tree-sitter-hl-face:function.call :inherit '(font-lock-function-call-face))
    (tree-sitter-hl-face:method.call :inherit '(font-lock-function-call-face))
@@ -128,10 +136,6 @@ determine the exact padding."
    (rainbow-delimiters-depth-6-face :foreground base6)
    (rainbow-delimiters-depth-7-face :foreground teal)
    (rainbow-delimiters-depth-8-face :foreground (doom-lighten blue .30))
-;;;; modeline
-   (mode-line :background base4)
-   (mode-line-inactive :background base3)
-   (mode-line-active :background base4)
 ;;;; header line
    (header-line :background bg-alt)
 ;;;; eldoc box
@@ -148,6 +152,12 @@ determine the exact padding."
    (diff-hl-margin-insert :background bg :foreground green)
    (diff-hl-margin-delete :background bg :foreground red)
    (diff-hl-margin-change :background bg :foreground base6)
+   (diff-hl-insert :background bg)
+   (diff-hl-delete :background bg)
+   (diff-hl-change :background bg)
+   (diff-refine-added :background bg :foreground success :underline t)
+   (diff-refine-changed :background bg :foreground blue :underline t)
+   (diff-refine-removed :background bg :foreground error :underline t)
 ;;;; corfu
    (corfu-border :background base5 :foreground fg-alt)
    (corfu-current :background (doom-lighten bg-alt 0.2) :foreground fg)
@@ -197,18 +207,15 @@ determine the exact padding."
    (popup-tip-face :background bg-alt
                    :foreground fg)
 ;;;; tty menu
-   (tty-menu-enabled-face :background bg-alt
-                          :foreground fg
-                          :weight 'bold)
-   (tty-menu-disabled-face :background selection
-                           :foreground fg
-                           :weight 'normal)
-   (tty-menu-selected-face :background blue
-                           :foreground fg
-                           :weight 'bold)
-   (variable-pitch :foreground fg-alt)
-   (flymake-end-of-line-diagnostics-face :box nil
-                                         :background selection)
+   (tty-menu-enabled-face :background bg-alt :foreground fg :weight 'bold)
+   (tty-menu-disabled-face :background selection :foreground fg :weight 'normal)
+   (tty-menu-selected-face :background blue :foreground fg :weight 'bold)
+   (variable-pitch :foreground fg)
+   ;;;; flymake
+   (flymake-end-of-line-diagnostics-face :box nil :background selection)
+   (flymake-note-echo-at-eol :foreground success :background bg-alt :weight 'regular)
+   (flymake-warning-echo-at-eol :foreground warning :background bg-alt :weight 'regular)
+   (flymake-error-echo-at-eol :foreground error :background bg-alt :weight 'regular)
 ;;;; sideline
    (sideline-lsp-code-action :foreground base6)
    (sideline-blame :slant 'normal
@@ -242,9 +249,9 @@ determine the exact padding."
    (meow-beacon-fake-selection :inherit 'region)
    (meow-beacon-fake-cursor :background (doom-lighten selection 0.3)
                             :foreground base0)
-   (region :background region)
+   (region :background (doom-lighten bg 0.1) :extend nil)
 
-   (secondary-selection :background bg
+   (secondary-selection :background (doom-lighten bg 0.05)
                         :foreground 'unspecified
                         :extend nil)
 
