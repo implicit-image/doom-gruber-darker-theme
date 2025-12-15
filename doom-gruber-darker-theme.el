@@ -30,7 +30,7 @@ determine the exact padding."
 (def-doom-theme doom-gruber-darker
     "A theme based on Alexey Kutepov's Gruber Darker theme."
   ;; name        gui       256       16
-  ((bg         '("#070707" nil       nil          ))
+  ((bg         '("#060606" nil       nil          ))
    (bg-alt     '("#101010" nil       nil          ))
    (base0      '("#0d0d0d" "black"   "black"      ))
    (base1      '("#1b1b1b" "#1b1b1b"              ))
