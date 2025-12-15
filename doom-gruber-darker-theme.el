@@ -1,6 +1,6 @@
 
 
-;;; doom-gruber-darker-theme.el --- Port of gruber-darker theme to Doom themes -*- lexical-binding: t; no-byte-compile: t; -*-
+;;; doom-gruber-darker-theme.el --- Port of gruber-darker theme to Doom themes -*- lexical-binding: t; no-byte-compile: t -*-
 ;;
 ;; Added: March 19, 2024 (4c981f2cccf3)
 ;; Author: Błażej Niewiadomski <https://github.com/implicit-image>
@@ -13,8 +13,6 @@
 (require 'doom-themes)
 (require 'faces)
 
-(message "loaded gruber")
-;;
 ;;; Variables
 
 (defgroup doom-gruber-darker-theme nil
@@ -34,8 +32,8 @@ determine the exact padding."
 (def-doom-theme doom-gruber-darker
     "A theme based on Alexey Kutepov's Gruber Darker theme."
   ;; name        gui       256       16
-  ((bg         '("#151515" nil       nil          ))
-   (bg-alt     '("#252525" nil       nil          ))
+  ((bg         '("#070707" nil       nil          ))
+   (bg-alt     '("#101010" nil       nil          ))
    (base0      '("#0d0d0d" "black"   "black"      ))
    (base1      '("#1b1b1b" "#1b1b1b"              ))
    (base2      '("#212122" "#1e1e1e"              ))
@@ -63,7 +61,7 @@ determine the exact padding."
    ;; face categories
    (highlight      base7)
    (vertical-bar   base0)
-   (selection      `(,(car (doom-lighten bg 0.05)) ,@(cdr base4)))
+   (selection      `(,(car (doom-lighten bg 0.1)) ,@(cdr base3)))
    (builtin        yellow)
    (comments       grey)
    (doc-comments   (doom-lighten grey 0.14))
@@ -76,7 +74,7 @@ determine the exact padding."
    (strings        green)
    (variables      fg)
    (numbers        base6)
-   (region         (doom-lighten selection 0.04))
+   (region         (doom-lighten selection 0.1))
    (error          red)
    (warning        (doom-lighten orange 0.3))
    (success        green)
@@ -85,8 +83,8 @@ determine the exact padding."
    (vc-deleted     red)
 
    ;; custom categories
-   (modeline-bg     `(,(doom-darken (car bg-alt) 0.6) ,@(cdr base3)))
-   (modeline-bg-alt `(,(doom-darken (car bg-alt) 0.8) ,@(cdr base3)))
+   (modeline-bg     `(,(doom-darken (car bg) 0.9) ,@(cdr base3)))
+   (modeline-bg-alt `(,(doom-darken (car bg) 0.8) ,@(cdr base3)))
    (modeline-fg     base8)
    (modeline-fg-alt comments)
    (-modeline-pad
@@ -94,7 +92,6 @@ determine the exact padding."
       (if (integerp doom-gruber-darker-padded-modeline)
           doom-gruber-darker-padded-modeline
         4))))
-
   ;; --- faces ------------------------------
   (
    (mode-line
@@ -209,9 +206,6 @@ determine the exact padding."
    (tty-menu-selected-face :background blue
                            :foreground fg
                            :weight 'bold)
-   (secondary-selection :background bg
-                        :foreground 'unspecified
-                        :extend t)
    (variable-pitch :foreground fg-alt)
    (flymake-end-of-line-diagnostics-face :box nil
                                          :background selection)
@@ -231,8 +225,8 @@ determine the exact padding."
    (anzu-mode-line :foreground fg
                    :weight 'bold)
 ;;;; meow
-   (meow-insert-indicator :background base4
-                          :extend t)
+   (meow-insert-indicato :background base4
+                         :extend t)
    (meow-beacon-indicator :background blue
                           :foreground bg-alt)
    (meow-motion-indicator :background cyan
@@ -243,13 +237,17 @@ determine the exact padding."
                           :foreground bg-alt)
    (meow-search-indicator :background bg-alt
                           :foreground base6)
-   (meow-search-highlight :weight 'bold
-                          :inherit 'region)
-   (meow-beacon-fake-selection :background (doom-lighten selection 0.1)
-                               :weight 'bold
-                               :inherit 'region)
-   (region :weight 'bold
-           :background (doom-lighten selection 0.1))
+
+   (meow-search-highlight :inherit 'region)
+   (meow-beacon-fake-selection :inherit 'region)
+   (meow-beacon-fake-cursor :background (doom-lighten selection 0.3)
+                            :foreground base0)
+   (region :background region)
+
+   (secondary-selection :background bg
+                        :foreground 'unspecified
+                        :extend nil)
+
 ;;;; devdocs
    (devdocs-code-block :background base4
                        :extend t)
