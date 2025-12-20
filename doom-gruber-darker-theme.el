@@ -230,7 +230,8 @@ determine the exact padding."
    (anzu-mode-line :foreground fg
                    :weight 'bold)
 ;;;; meow
-   (meow-insert-indicator :background base4
+   (meow-insert-indicator :background yellow
+                          :foreground bg-alt
                           :extend t)
    (meow-beacon-indicator :background blue
                           :foreground bg-alt)
