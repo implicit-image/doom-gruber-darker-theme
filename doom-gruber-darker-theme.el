@@ -149,12 +149,12 @@ determine the exact padding."
    (diff-hl-delete :background bg)
    (diff-hl-change :background bg)
 ;;;; diffs
-   (diff-added :background (doom-darken green 0.5) :foreground green)
-   (diff-removed :background (doom-darken red 0.5) :foreground red)
-   (diff-changed :background (doom-darken cyan 0.5) :foreground cyan)
-   (diff-refine-added :background (doom-darken success 0.5) :foreground (doom-darken success 0.3) :underline t)
-   (diff-refine-changed :background (doom-darken cyan 0.5) :foreground (doom-darken blue 0.3)  :underline t)
-   (diff-refine-removed :background (doom-darken error 0.5) :foreground (doom-darken error 0.3) :underline t)
+   (diff-added :background (doom-darken green 0.7) :foreground green)
+   (diff-removed :background (doom-darken red 0.7) :foreground red)
+   (diff-changed :background (doom-darken cyan 0.7) :foreground cyan)
+   (diff-refine-added :background (doom-darken success 0.5) :foreground (doom-lighten success 0.4) :underline t)
+   (diff-refine-changed :background (doom-darken cyan 0.5) :foreground (doom-lighten cyan 0.4)  :underline t)
+   (diff-refine-removed :background (doom-darken error 0.5) :foreground (doom-lighten error 0.4) :underline t)
 ;;;; corfu
    (corfu-border :background base5 :foreground fg-alt)
    (corfu-current :background (doom-lighten bg-alt 0.2) :foreground fg)
