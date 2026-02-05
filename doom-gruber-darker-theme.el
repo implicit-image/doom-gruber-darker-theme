@@ -91,7 +91,11 @@ determine the exact padding."
     (when doom-gruber-darker-padded-modeline
       (if (integerp doom-gruber-darker-padded-modeline)
           doom-gruber-darker-padded-modeline
-        4))))
+        4)))
+   (diff-added-light (doom-darken green 0.4))
+   (diff-removed-light (doom-darken red 0.4))
+   (diff-added-dark (doom-darken green 0.7))
+   (diff-removed-dark (doom-darken red 0.7)))
   ;; --- faces ------------------------------
   (
    (mode-line
@@ -137,24 +141,32 @@ determine the exact padding."
    (eldoc-box-body :box nil)
    (eldoc-box-border :width 'narrow :background base1)
 ;;;; show paren mode
-   (show-paren-match :background red :foreground 'unspecified)
+   (show-paren-match :background yellow :foreground base0 :weight 'bold)
    (show-paren-match-expression :box nil :background bg)
 ;;;; window-stool
    (window-stool-face :background bg-alt :foreground fg :extend t)
 ;;;; diff-hl
-   (diff-hl-margin-insert :foreground success :foreground success)
+   (diff-hl-margin-insert :background success :foreground success)
    (diff-hl-margin-delete :background error :foreground error)
    (diff-hl-margin-change :background cyan :foreground cyan)
    (diff-hl-insert :background bg)
    (diff-hl-delete :background bg)
    (diff-hl-change :background bg)
 ;;;; diffs
-   (diff-added :background (doom-darken green 0.7) :foreground green)
-   (diff-removed :background (doom-darken red 0.7) :foreground red)
-   (diff-changed :background (doom-darken cyan 0.7) :foreground cyan)
-   (diff-refine-added :background (doom-darken success 0.5) :foreground (doom-lighten success 0.4) :underline t)
-   (diff-refine-changed :background (doom-darken cyan 0.5) :foreground (doom-lighten cyan 0.4)  :underline t)
-   (diff-refine-removed :background (doom-darken error 0.5) :foreground (doom-lighten error 0.4) :underline t)
+   (diff-header :background bg :foreground fg-alt)
+   (diff-file-header :background (doom-lighten bg-alt 0.2) :foreground bg)
+   ;; (diff-header :background   :foreground )
+   (diff-added :background diff-added-dark :foreground 'unspecified)
+   (diff-removed :background diff-removed-dark :foreground 'unspecified)
+   (diff-changed :background (doom-darken cyan 0.7) :foreground 'unspecified)
+   (diff-refine-added :background diff-added-light :underline nil)
+   (diff-refine-changed :background (doom-darken cyan 0.4) :underline nil)
+   (diff-refine-removed :background diff-removed-light :underline nil)
+;;;; magit diff
+   (magit-diff-added :background diff-added-dark :foreground 'unspecified)
+   (magit-diff-added-highlight :background diff-added-dark :foreground 'unspecified)
+   (magit-diff-removed :background diff-removed-dark :foreground 'unspecified)
+   (magit-diff-removed-highlight :background diff-removed-dark :foreground 'unspecified)
 ;;;; corfu
    (corfu-border :background base5 :foreground fg-alt)
    (corfu-current :background (doom-lighten bg-alt 0.2) :foreground fg)
@@ -212,12 +224,12 @@ determine the exact padding."
 ;;;; anzu
    (anzu-mode-line :foreground fg :weight 'bold)
 ;;;; meow
-   (meow-insert-indicator :background yellow :foreground bg-alt :extend t)
-   (meow-beacon-indicator :background blue :foreground bg-alt)
-   (meow-motion-indicator :background cyan :foreground fg)
-   (meow-normal-indicator :background warning :foreground bg-alt)
-   (meow-keypad-indicator :background violet :foreground bg-alt)
-   (meow-search-indicator :background bg-alt :foreground base6)
+   (meow-insert-indicator :foreground yellow :extend t)
+   (meow-beacon-indicator :foreground blue)
+   (meow-motion-indicator :foreground cyan)
+   (meow-normal-indicator :foreground warning)
+   (meow-keypad-indicator :foreground violet)
+   (meow-search-indicator :foreground base6 :background bg-alt)
 
    (meow-search-highlight :inherit 'region)
    (meow-beacon-fake-selection :inherit 'region)
@@ -227,7 +239,7 @@ determine the exact padding."
    (secondary-selection :background (doom-lighten bg 0.05) :foreground 'unspecified :extend nil)
 ;;;;
    (mouse :background fg)
-;;;; devdocs
+   ;;;; devdocs
    (devdocs-code-block :background base4 :extend t)
 
    (scroll-bar :foreground bg :background base4)
