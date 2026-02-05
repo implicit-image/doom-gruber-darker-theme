@@ -107,6 +107,7 @@ determine the exact padding."
 ;;;; window dividers
    (window-divider :background fg :foreground fg)
    (internal-border :background bg :foreground base4 :width 'narrow)
+   (vertical-border :foreground bg-alt :background bg)
    (border :background bg :foreground base4 :width 'narrow)
 ;;;; org mode
    (org-imminent-deadline :box `(:line-width -1 :color ,orange :style nil) :foreground orange)
@@ -139,7 +140,7 @@ determine the exact padding."
    (header-line :background bg-alt)
 ;;;; eldoc box
    (eldoc-box-body :box nil)
-   (eldoc-box-border :width 'narrow :background base1)
+   (eldoc-box-border :width 'narrow :background fg-alt)
 ;;;; show paren mode
    (show-paren-match :background yellow :foreground base0 :weight 'bold)
    (show-paren-match-expression :box nil :background bg)
@@ -240,7 +241,7 @@ determine the exact padding."
 ;;;;
    (mouse :background fg)
    ;;;; devdocs
-   (devdocs-code-block :background base4 :extend t)
+   ;; (devdocs-code-block :background base4 :extend t)
 
    (scroll-bar :foreground bg :background base4)
    ;; --- variables --------------------------
