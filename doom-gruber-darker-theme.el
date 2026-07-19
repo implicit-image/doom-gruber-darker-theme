@@ -232,8 +232,8 @@ determine the exact padding."
    (meow-keypad-indicator :foreground violet)
    (meow-search-indicator :foreground base6 :background bg-alt)
 
-   (meow-search-highlight ::background (doom-lighten bg 0.1) :extend nil)
-   (meow-beacon-fake-selection ::background (doom-lighten bg 0.1) :extend nil)
+   (meow-search-highlight :background (doom-lighten bg 0.1) :extend nil)
+   (meow-beacon-fake-selection :background (doom-lighten bg 0.1) :extend nil)
    (meow-beacon-fake-cursor :background (doom-lighten selection 0.3) :foreground base0)
    (region :background (doom-lighten bg 0.1) :extend nil)
 
